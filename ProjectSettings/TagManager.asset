@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - Ghost
+  - Wall
+  - Clear
+  - Title
+  - EnemySpawn
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Object
+    uniqueID: 3404513283
+    locked: 0
+  - name: NormalParticle
+    uniqueID: 3988622151
+    locked: 0
+  - name: Bullet
+    uniqueID: 3787326467
+    locked: 0
+  - name: Enemy
+    uniqueID: 3574122557
+    locked: 0
+  - name: Player
+    uniqueID: 547819991
+    locked: 0
+  - name: AttackParticle
+    uniqueID: 2407865035
+    locked: 0
+  - name: Title
+    uniqueID: 3357513797
+    locked: 0
+  - name: Gimmick
+    uniqueID: 3142380023
+    locked: 0
+  - name: most
+    uniqueID: 3324737533
+    locked: 0
