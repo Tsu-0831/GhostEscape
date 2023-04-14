@@ -34,7 +34,7 @@ public class AttackController : MonoBehaviour
     public void getVect(Vector3 from, Vector3 to)
     {
         // 各座標の差を取る
-        direction = new Vector3(to.x - from.x, to.y - from.y, to.z - from.z);
+        direction = new Vector3(to.x - from.x, to.y - from.y, 0);
     }
 
     // 衝突検知

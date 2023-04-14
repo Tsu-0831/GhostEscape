@@ -8,14 +8,20 @@ public class UnitManage : MonoBehaviour
     [SerializeField] public float[] charpower = new float[1]; // 敵キャラのパワー
     [SerializeField] public float[] charspeed = new float[1]; // 敵キャラの移動スピード
     [SerializeField] private float AddPower; // パワーの上昇値
-    [SerializeField] private float AddSpeed; // パワーの上昇値
+    [SerializeField] private float AddSpeed; // スピードの上昇値
     
     public int UnitLength; // 配列の大きさ
     public int unitnumber; // キャラクターパラメータの格納場所を示す
+    public float Buff_Power; // 現在のパワーの上昇値
+    public float Buff_Speed; // 現在のスピードの上昇値
 
     // 初期設定
     void Start()
     {
+        // 初期値設定
+        Buff_Power = 0; // 現在のパワーの上昇値
+        Buff_Speed = 0; // 現在のスピードの上昇値
+
         UnitLength = charname.Length; // 配列の大きさを代入
     }
 
@@ -36,7 +42,7 @@ public class UnitManage : MonoBehaviour
         // 敵キャラ全てが対象
         for (unitnumber = 0; unitnumber < UnitLength; unitnumber++)
         {
-            charpower[unitnumber] += AddPower;
+            Buff_Power += AddPower;
         }
     }
 
@@ -46,7 +52,7 @@ public class UnitManage : MonoBehaviour
         // 敵キャラ全てが対象
         for (unitnumber = 0; unitnumber < UnitLength; unitnumber++)
         {
-            charspeed[unitnumber] += AddSpeed;
+            Buff_Speed += AddSpeed;
         }
     }
 }

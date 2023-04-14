@@ -22,7 +22,7 @@ public class SceneController : MonoBehaviour
                 // プレイ画面へ
                 SceneManager.LoadScene("PlayScene", LoadSceneMode.Single);
             }
-            else if (SceneManager.GetActiveScene().name == "GameClear" || SceneManager.GetActiveScene().name == "GameClear")// ゲームクリア画面かゲームオーバー画面の時
+            else if (SceneManager.GetActiveScene().name == "GameClear" || SceneManager.GetActiveScene().name == "GameOver")// ゲームクリア画面かゲームオーバー画面の時
             {
                 // タイトル画面へ
                 SceneManager.LoadScene("TitleScene", LoadSceneMode.Single);

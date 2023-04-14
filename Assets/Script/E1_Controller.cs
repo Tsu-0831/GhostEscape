@@ -22,13 +22,15 @@ public class E1_Controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audioSource = GetComponent<AudioSource>(); // AudioSourceコンポーネントを取得
-        animator = GetComponent<Animator>(); // アニメーションコンポーネントを取得
+        // オブジェクト
         player = GameObject.Find("Player1"); // プレイヤーオブジェクトを取得
         unitmanager = GameObject.Find("UnitManager"); // キャラのパラメータが格納されている場所を探す
-        UnitManage = unitmanager.GetComponent<UnitManage>(); // キャラが保存されているデータを呼び出す
 
-        //moveSpeed = UnitManage.charspeed[UnitNumber_Ghost]; // パラメータを保存しているところから速度取得
+        // コンポーネント
+        audioSource = GetComponent<AudioSource>(); // AudioSourceコンポーネントを取得
+        animator = GetComponent<Animator>(); // アニメーションコンポーネントを取得
+        UnitManage = unitmanager.GetComponent<UnitManage>(); // キャラが保存されているデータを呼び出す
+        
     }
 
     // Update is called once per frame
@@ -39,7 +41,7 @@ public class E1_Controller : MonoBehaviour
         else audioSource.UnPause();
 
         // ゴーストの設定された速度でプレイヤーの方へ移動していく
-        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, UnitManage.charspeed[UnitNumber_Ghost] * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, (UnitManage.charspeed[UnitNumber_Ghost] + UnitManage.Buff_Speed) * Time.deltaTime);
     }
 
     

@@ -17,7 +17,7 @@ public class ClearCondition : MonoBehaviour
 
     // カウント
     public int Condition = 0; // クリアまでの達成数
-    public static int Subjugation = 0; // エネミー討伐数(結果をゲームクリア画面に持ってくる)
+    public static int Subjugation; // エネミー討伐数(結果をゲームクリア画面に持ってくる)
     public int SpawnBoadLength; // SpawnBoad配列の大きさ
     public int CurrentTimeLimit; // 現在のカウントダウン表記
     public static float Second; // 経過時間を記録
@@ -41,7 +41,10 @@ public class ClearCondition : MonoBehaviour
     void Start()
     {
         // 初期値設定
-        
+        Subjugation = 0; // 討伐数の初期値0
+        Second = 0; // 経過時間の初期値0
+        TimeCount = 2; // 秒経過記録のための初期値2
+
 
         // キャラクターパラメータ
         UnitManage = unitmanager.GetComponent<UnitManage>(); // キャラが保存されているデータを呼び出す

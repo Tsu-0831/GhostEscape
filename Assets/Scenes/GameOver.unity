@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 48}
-  m_SizeDelta: {x: 328.65, y: 50.83}
+  m_AnchoredPosition: {x: 0, y: -196}
+  m_SizeDelta: {x: 418.32, y: 87.88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &420959881
 MonoBehaviour:
@@ -182,8 +182,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_Font: {fileID: 12800000, guid: f5c87b8ccfc7ee14dbd0a038a4561843, type: 3}
+    m_FontSize: 29
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -194,7 +194,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press [Space] to back Title Screen
+  m_Text: "\u30BF\u30A4\u30C8\u30EB\u306B\u623B\u308B\u3000[\u30B9\u30DA\u30FC\u30B9]"
 --- !u!222 &420959882
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -424,8 +424,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 127}
-  m_SizeDelta: {x: 236.83, y: 62.56}
+  m_AnchoredPosition: {x: 0.000000059605, y: 155}
+  m_SizeDelta: {x: 381.47, y: 120.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &908319943
 MonoBehaviour:
@@ -449,11 +449,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
-    m_MaxSize: 40
+    m_MaxSize: 60
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1

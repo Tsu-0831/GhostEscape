@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerControll : MonoBehaviour
 {
+    // パラメータとオブジェクトの設定
     [SerializeField] float moveSpeed; // プレイヤーのスピード
     [SerializeField] float chargeTime; // 弾を発射始める時間
     [SerializeField] float lounchTime; // 次の弾を発射する時間
@@ -16,6 +17,9 @@ public class PlayerControll : MonoBehaviour
     [SerializeField] private float maxHP; // 最大HPを設定
     [SerializeField] private float maxMP; // 最大MPを設定
     [SerializeField] private GameObject unitmanager; // パラメータを保存しているオブジェクト
+
+    // オブジェクト
+    private GameObject Bullet; // プレイヤーが打つ弾のオブジェクト
     
     // アニメーションとサウンド
     private Animator animator; // プレイヤーのアニメーション
@@ -134,7 +138,7 @@ public class PlayerControll : MonoBehaviour
     // プレイヤーのライフ処理
     void lifemanager()
     {
-        receive_dg = UnitManage.charpower[UnitManage.unitnumber]; // ダメージを決定
+        receive_dg = UnitManage.charpower[UnitManage.unitnumber] + UnitManage.Buff_Power; // ダメージを決定
 
         currentHP = currentHP - receive_dg; // ダメージ分を引く
         LifeRate = currentHP / maxHP; // 体力バーの長さを計算
@@ -156,11 +160,11 @@ public class PlayerControll : MonoBehaviour
             currentMP = currentMP - Magic_cs; // 現在のMPに消費MPを引く
             mp_bar.value = currentMP / maxMP; // MPバーに反映
 
-            // 弾の生成
-            GameObject g = Instantiate(a_Prefab, transform.position, Quaternion.identity);
+            // 弾のインスタンスを代入
+            Bullet = Instantiate(a_Prefab, transform.position, Quaternion.identity);
             
             // getVect関数を呼び出し打ち出す方向を取得
-            g.GetComponent<AttackController>().getVect(transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition));
+            Bullet.GetComponent<AttackController>().getVect(transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition));
             
             audioSource.PlayOneShot(attack_sound); // 発射音を出す
 

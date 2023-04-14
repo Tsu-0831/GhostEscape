@@ -30,6 +30,7 @@ public class PauseMenu : MonoBehaviour
     // タイトル画面に戻る関数
     private void Home()
     {
+        Time.timeScale = 1; // 全てのオブジェクトを動かす
         SceneManager.LoadScene("TitleScene", LoadSceneMode.Single); // タイトル画面に遷移する
         pauseScene.SetActive(false); // ポーズ画面非表示
     }
