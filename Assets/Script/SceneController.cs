@@ -33,8 +33,11 @@ public class SceneController : MonoBehaviour
     // プレイヤーがクリアまたはタイトルへ戻るためのオブジェクトにぶつかった時
     void OnTriggerEnter2D(Collider2D coll){
         // クリアの箇所に来た時、クリア画面へ
-        if (coll.gameObject.name == "Clear") SceneManager.LoadScene("GameClear", LoadSceneMode.Single);
-
+        if (coll.gameObject.name == "Clear")
+        {
+            SceneManager.LoadScene("GameClear", LoadSceneMode.Single);
+            Cursor.visible = true; // マウスカーソルを表示
+        }
         // 戻る場所に来た時タイトルに戻る
         if (coll.gameObject.name == "Title") SceneManager.LoadScene("TitleScene", LoadSceneMode.Single);
     }

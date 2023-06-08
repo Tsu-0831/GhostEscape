@@ -32,7 +32,7 @@ public class E1_Generator : MonoBehaviour
 		
 		// エネミー生成開始
 		InvokeRepeating ("GeneE1", FirstSpawnTime, SpawnTime); // FirstSpawnTime秒後にSpawnTime秒間隔で呼び出す
-		
+
 		// クリア状況
 		ClearCondition = ClearConditionObject.GetComponent<ClearCondition>(); // クリア条件のスクリプトを格納
 	}

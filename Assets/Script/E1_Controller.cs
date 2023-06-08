@@ -10,6 +10,8 @@ public class E1_Controller : MonoBehaviour
 
     // サウンド
     private AudioSource audioSource; // サウンドコンポーネント用
+
+    // アニメーション
     private Animator animator; // アニメーター変数
     
     // パラメータ
@@ -43,7 +45,4 @@ public class E1_Controller : MonoBehaviour
         // ゴーストの設定された速度でプレイヤーの方へ移動していく
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, (UnitManage.charspeed[UnitNumber_Ghost] + UnitManage.Buff_Speed) * Time.deltaTime);
     }
-
-    
-
 }

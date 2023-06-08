@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class PlayerControll : MonoBehaviour
 {
     // パラメータとオブジェクトの設定
-    [SerializeField] float moveSpeed; // プレイヤーのスピード
+    [SerializeField] public float moveSpeed; // プレイヤーのスピード
     [SerializeField] float chargeTime; // 弾を発射始める時間
     [SerializeField] float lounchTime; // 次の弾を発射する時間
     [SerializeField] private AudioClip attack_sound; // 発射のサウンド変数
@@ -36,8 +36,8 @@ public class PlayerControll : MonoBehaviour
     private int unitnumber; // パラメータが保存されている場所を示す
 
     // プレイヤーの入力
-    private float p_x; // 横移動
-    private float p_y; // 縦移動
+    public float p_x; // 横移動
+    public float p_y; // 縦移動
 
     // 他スクリプト用
     private UnitManage UnitManage; // パラメータを管理しているスクリプトをいれる
@@ -85,6 +85,7 @@ public class PlayerControll : MonoBehaviour
 
         //動く
         transform.position += new Vector3(p_x, p_y).normalized * Time.deltaTime * moveSpeed;
+
         if (Time.deltaTime != 0) // ポーズ画面じゃないとき
         {
             if (Input.GetMouseButtonDown(0)) { // 左クリックされているとき
@@ -167,8 +168,6 @@ public class PlayerControll : MonoBehaviour
             Bullet.GetComponent<AttackController>().getVect(transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition));
             
             audioSource.PlayOneShot(attack_sound); // 発射音を出す
-
-
         }
     }
 

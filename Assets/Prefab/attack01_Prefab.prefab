@@ -100,9 +100,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69a26f663ac73c74f9ccd79739176151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  a_speed: 5
-  attack_sound: {fileID: 0}
   e_dead_effect: {fileID: 7209717273082837819, guid: a072aaf10115b7747983ce952c31cf91, type: 3}
+  Enemy_Break: {fileID: 8300000, guid: 7a427ee90b610ab4190454886972439f, type: 3}
+  Attack_Break: {fileID: 8300000, guid: 323c583349031554d92edd14988b0acd, type: 3}
+  a_speed: 5
 --- !u!50 &2902882034709261118
 Rigidbody2D:
   serializedVersion: 4

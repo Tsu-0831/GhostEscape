@@ -10,6 +10,7 @@ TagManager:
   - Clear
   - Title
   - EnemySpawn
+  - Fairy
   layers:
   - Default
   - TransparentFX
@@ -70,6 +71,9 @@ TagManager:
     locked: 0
   - name: Gimmick
     uniqueID: 3142380023
+    locked: 0
+  - name: Fairy
+    uniqueID: 2681759519
     locked: 0
   - name: most
     uniqueID: 3324737533

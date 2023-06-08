@@ -9,6 +9,12 @@ public class AttackController : MonoBehaviour
     
     // エフェクト
     [SerializeField] private ParticleSystem e_dead_effect; // エネミー消滅エフェクト
+
+    // サウンド
+    private AudioSource audioSource; // サウンドコンポーネント用
+    [SerializeField] private AudioClip Enemy_Break; // 魔法が敵にぶつかり消滅した時のサウンド
+    [SerializeField] private AudioClip Attack_Break; // 魔法が壁にぶつかった時のサウンド
+
     
     // 弾道処理に使用
     [SerializeField] private float a_speed; // 弾の速度
@@ -21,12 +27,16 @@ public class AttackController : MonoBehaviour
     
     void Start()
     {
+        // サウンド
+        audioSource = GetComponent<AudioSource>(); // AudioSourceコンポーネントを取得
+
+        // 初期設定
         thisTransform = transform; // 弾の初期位置を設定
     }
 
     void Update()
     {
-        newPos = thisTransform.position + new Vector3(direction.x, direction.y, 0).normalized * Time.deltaTime * a_speed; // 次の座標を取得
+        newPos = thisTransform.position + new Vector3(direction.x, direction.y, 0).normalized * Time.deltaTime * a_speed; // 次に進む座標を取得
         transform.position = new Vector3(newPos.x, newPos.y, newPos.z); // 計算した方向へ進める
     }
     
@@ -41,7 +51,11 @@ public class AttackController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D coll) 
     {
         // 壁に当たったとき、弾を消す
-        if (coll.gameObject.name == "TilemapObject") Destroy (gameObject);
+        if (coll.gameObject.name == "TilemapObject")
+        {
+            Destroy (gameObject); // 魔法を消す
+            audioSource.PlayOneShot(Attack_Break); // 魔法が壁にぶつかる音
+        }
 
         // 敵に当たったとき
         if (coll.gameObject.name == "E1_Prefab(Clone)")
@@ -59,6 +73,7 @@ public class AttackController : MonoBehaviour
             e_dead_effect.transform.position = coll.gameObject.transform.position; // エフェクトの場所をエネミー座標に設定
             Instantiate (e_dead_effect); // エネミー消滅エフェクトを生成
             Destroy (coll.gameObject); // 敵を消す
+            audioSource.PlayOneShot(Enemy_Break); // 敵の消滅音を出す
         }
     }
 }
