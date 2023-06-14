@@ -11,7 +11,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private Button pauseCloseButton; // ポーズを閉じるボタン
     [SerializeField] private GameObject pauseScene; // ポーズ画面のオブジェクト
 
-    // Start is called before the first frame update
+    // 初期設定
     void Start()
     {
         pauseScene.SetActive(false); // ポーズ画面非表示

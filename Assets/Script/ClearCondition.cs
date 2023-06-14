@@ -67,6 +67,7 @@ public class ClearCondition : MonoBehaviour
         MissionText.text = "全てのゴーストの出現場所を見つけ、魔法陣を壊そう!!"; // 道筋
     }
 
+    // 時間計測とシステム処理
     void Update()
     {
         Second += Time.deltaTime; // 経過時間を計測

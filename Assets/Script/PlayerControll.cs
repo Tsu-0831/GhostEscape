@@ -47,6 +47,7 @@ public class PlayerControll : MonoBehaviour
     public float charge_MPTime; // MPをチャージする間隔
     public float charge_MP; // 加算していくMPの値
 
+    // 初期設定
     private void Start()
     {
         // アニメーション
@@ -68,6 +69,7 @@ public class PlayerControll : MonoBehaviour
         charge_MP = 1;
     }
 
+    // 監視
     void Update()
     {
         p_x = Input.GetAxisRaw("Horizontal"); // 横方向の入力

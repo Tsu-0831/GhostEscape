@@ -8,6 +8,7 @@ public class Player_Camera : MonoBehaviour
     public GameObject player; // プレイヤーのゲームオブジェクト
     private int CameraPosition_Z = -10; // カメラ追従の際のZ座標
     
+    // 座標更新
     void Update()
     {
         // プレイヤーを追従

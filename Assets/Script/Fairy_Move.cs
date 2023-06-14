@@ -29,6 +29,7 @@ public class Fairy_Move : MonoBehaviour
     // 他スクリプト用
     private PlayerControll PlayerControll; // プレイヤーのスクリプトをいれる
 
+    // 初期設定
     void Start()
     {
         // サウンド
@@ -45,7 +46,7 @@ public class Fairy_Move : MonoBehaviour
         
     }
 
-    // Update is called once per frame
+    // 入力の監視と座標の更新
     void Update()
     {
         // マウスの座標を取得

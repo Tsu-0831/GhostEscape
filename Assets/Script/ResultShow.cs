@@ -33,7 +33,7 @@ public class ResultShow : MonoBehaviour
     [SerializeField] private int Rank_Base_A; // A判定の基準
     [SerializeField] private int Rank_Base_B; // B判定の基準
 
-    // Start is called before the first frame update
+    // 初期設定
     void Start()
     {
         // テキストコンポーネントを取得

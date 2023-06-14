@@ -25,7 +25,7 @@ public class E1_Generator : MonoBehaviour
 	// スクリプト
 	private ClearCondition ClearCondition; // クリア条件を管理しているスクリプトをいれる
 	
-	// Start is called before the first frame update
+	// 初期設定
 	void Start () {
 		// サウンド
 		audioSource = GetComponent<AudioSource>(); // AudioSourceコンポーネントを取得
@@ -37,6 +37,7 @@ public class E1_Generator : MonoBehaviour
 		ClearCondition = ClearConditionObject.GetComponent<ClearCondition>(); // クリア条件のスクリプトを格納
 	}
 
+	// プレイヤー座標の監視
 	void Update()
 	{
 		if (gameObject.activeSelf == true) // スポーン床がアクティブなら

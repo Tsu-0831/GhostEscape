@@ -21,7 +21,7 @@ public class E1_Controller : MonoBehaviour
     // 他スクリプト用
     private UnitManage UnitManage; // パラメータを管理しているスクリプトをいれる
 
-    // Start is called before the first frame update
+    // 初期設定
     void Start()
     {
         // オブジェクト
@@ -35,7 +35,7 @@ public class E1_Controller : MonoBehaviour
         
     }
 
-    // Update is called once per frame
+    // 入力の監視
     void Update()
     {
         // ポーズ画面の時は音を止める

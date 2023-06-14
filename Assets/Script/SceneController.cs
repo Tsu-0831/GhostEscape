@@ -5,9 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    // [SerializeField] private GameObject player; // プレイヤーを格納
-
-    // Update is called once per frame
+    // 監視
     void Update()
     {
         // スペースキーが押されたとき
